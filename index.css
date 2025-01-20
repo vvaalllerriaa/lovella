@@ -1,108 +1,93 @@
-.cont{
-    width: auto;
+/* Основний контейнер */
+.cont {
+    width: 100%;
+    /* Займає всю ширину */
     background: #d0effc;
     height: auto;
+    padding: 20px;
+    /* Додамо відступи для краси */
+    box-sizing: border-box;
+    /* Ураховуємо відступи у ширині */
 }
 
-/* Загальний стиль для меню */
-.menu {
-    display: flex;
-    justify-content: space-around;
-    /* Рівномірний розподіл пунктів меню */
-    align-items: center;
-    background: rgba(255, 255, 255, 0.6);
-    /* Напівпрозоре тло */
-    height: 50px;
-    border-bottom: 1px solid #ddd;
-    /* Лінія під меню */
-    padding: 0 10px;
-    /* Внутрішній відступ */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+/* Меню — вже адаптоване, залишаємо без змін */
 
-/* Стиль для пунктів меню */
-.menu-item {
-    flex: 1;
-    /* Кожен пункт займає однакову ширину */
-    text-align: center;
-    text-decoration: none;
-    /* Видалення підкреслення */
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    padding: 10px 0;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-/* Ховер-ефект для пунктів меню */
-.menu-item:hover {
-    color: #007bff;
-    background-color: rgba(0, 123, 255, 0.1);
-    /* Легке підсвічування */
-    border-radius: 5px;
-}
-
-
-
-/* Адаптація для мобільних пристроїв */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        /* Вертикальне меню */
-        height: auto;
-        /* Автоматична висота */
-        padding: 10px 0;
-    }
-
-    .menu-item {
-        flex: none;
-        /* Знімаємо рівномірний розподіл */
-        width: 100%;
-        /* Кожен пункт займає всю ширину */
-        margin-bottom: 5px;
-    }
-
-    .menu-item:last-child {
-        margin-bottom: 0;
-        /* Видалення відступу для останнього пункту */
-    }
-}
-
-.sagolovok{
+/* Заголовки та текст */
+.sagolovok {
     font-family: "Ledger";
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 22px;
     letter-spacing: -0.02em;
     text-align: center;
     line-height: 120%;
     color: #000;
+    margin-bottom: 20px;
+    /* Додамо відступ */
 }
 
-.text{
+.text {
     font-family: "Jost";
     font-weight: 400;
     font-size: 20px;
     color: #000;
-    margin-top: 300px;
+    margin: 50px 0;
+    /* Замість фіксованого margin-top */
     text-align: center;
 }
 
-.textcenter{
+.textcenter {
     font-family: "Alkalami";
     font-weight: 400;
     font-size: 50px;
     text-align: center;
     color: #000;
-    margin-top: 15px;
+    margin: 15px 0;
+    /* Верхній і нижній відступи */
 }
 
-.foto{
+/* Зображення */
+.foto {
     width: 200px;
-    height: 200px;
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 42%;
+    /* Початковий розмір */
+    height: auto;
+    /* Зберігає пропорції */
+    display: block;
+    /* Центруємо через margin */
+    margin: 50px auto;
     margin-bottom: 200px;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .text {
+        font-size: 16px;
+        /* Зменшимо розмір тексту */
+        margin: 30px 0;
+        /* Відступи для мобільних */
+    }
+
+    .textcenter {
+        font-size: 30px;
+        /* Менший заголовок */
+    }
+
+    .foto {
+        width: 150px;
+        /* Зменшимо ширину */
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 14px;
+    }
+
+    .textcenter {
+        font-size: 24px;
+    }
+
+    .foto {
+        width: 120px;
+    }
 }
